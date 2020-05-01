@@ -6,11 +6,14 @@
   "private": true,
   "scripts": {
     "selenium-standalone": "selenium-standalone",
-    "prepare": "selenium-standalone install"
+    "prepare": "yarn run snyk-protect && selenium-standalone install",
+    "snyk-protect": "snyk protect"
   },
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "selenium-standalone": "^6.15.4"
-  }
+    "selenium-standalone": "^6.15.4",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
